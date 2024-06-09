@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f6f6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .content {
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            color: #888888;
+            font-size: 12px;
+            padding-top: 20px;
+        }
+        .highlight {
+            color: #0056b3;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            background-color: #28a745;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Payment Confirmation</h1>
+    </div>
+    <div class="content">
+        <p>Dear <span th:text="${customerName}">Customer Name</span>,</p>
+        <p>Your payment of <strong class="highlight" th:text="${amount}">$0.00</strong> has been successfully processed.</p>
+        <p>Order reference: <strong th:text="${orderReference}">ORDER123456</strong>.</p>
+        <p>We appreciate your business and hope you enjoy your purchase!</p>
+        <p>Thank you for choosing our service. If you have any questions, feel free to contact us.</p>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024. All rights reserved.</p>
+    </div>
+</div>
+</body>
+</html>
